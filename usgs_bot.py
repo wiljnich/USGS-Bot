@@ -10,7 +10,7 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 queries = ["#FreeMapMonday"]
-tweets_per_query  = 10000
+tweets_per_query  = 100000
 
 for tweet in tweepy.Cursor(api.search, q=queries, tweet_mode="extended").items(tweets_per_query):
     if tweet.user.screen_name == 'USGSstore':
